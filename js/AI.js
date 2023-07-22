@@ -7,25 +7,26 @@ AI.historyTable	=	{};		//历史表
 
 //人工智能初始化
 AI.init = function(pace){
-	var bill = AI.historyBill || com.gambit; //开局库
-	if (bill.length){
-		var len=pace.length;
-		var arr=[];
-		//先搜索棋谱
-		for (var i=0;i< bill.length;i++){
-			if (bill[i].slice(0,len)==pace) {
-			arr.push(bill[i]);
-			}
-		}
-		if (arr.length){
-			var inx=Math.floor( Math.random() * arr.length );
-			AI.historyBill = arr ;
-			return arr[inx].slice(len,len+4).split("");
-		}else{
-			AI.historyBill = [] ;
-		}
-		
-	}
+	// var bill = AI.historyBill || com.gambit; //开局库
+	// if (bill.length){
+	// 	var len=pace.length;
+	// 	var arr=[];
+	// 	//先搜索棋谱
+	// 	for (var i=0;i< bill.length;i++){
+	// 		if (bill[i].slice(0,len)==pace) {
+	// 		arr.push(bill[i]);
+	// 		}
+	// 	}
+	// 	if (arr.length){
+	// 		var inx=Math.floor( Math.random() * arr.length );
+	// 		AI.historyBill = arr ;
+	// 		return arr[inx].slice(len,len+4).split("");
+	// 	}else{
+	// 		AI.historyBill = [] ;
+	// 	}
+	// }
+
+	console.log('=== AI.init ===')
 	 //如果棋谱里面没有，人工智能开始运作
 	var initTime = new Date().getTime();
 	AI.treeDepth=play.depth;
@@ -122,6 +123,8 @@ AI.getAlphaBeta = function (A, B, depth, map ,my) {
 	//	if (history && history.depth >= AI.treeDepth-depth+1){
 	//		return 	history.value*my;
 	//}
+
+	console.log('A ', A, 'B ', B, 'depth ', depth, 'map ', JSON.stringify(map), 'my ', my)
 	if (depth == 0) {
 		return {"value":AI.evaluate(map , my)}; //局面评价函数;
 　	}
