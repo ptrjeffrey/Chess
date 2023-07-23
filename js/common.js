@@ -637,7 +637,7 @@ com.bylaw.z = function (x,y,map,my){
 	
 	return d;
 }
-
+// 红子价值
 com.value = {
 	
 	//车价值
@@ -717,7 +717,6 @@ com.value = {
 	
 	//炮价值
 	p:[
-		
 		[100, 100,  96, 91,  90, 91,  96, 100, 100],
 		[ 98,  98,  96, 92,  89, 92,  96,  98,  98],
 		[ 97,  97,  96, 91,  92, 91,  96,  97,  97],
@@ -768,8 +767,8 @@ com.args={
 	'z':{text:"兵", img:'r_z', my:1 ,bl:"z", value:com.value.z},
 	
 	//蓝子
-	'C':{text:"�", img:'b_c', my:-1 ,bl:"c", value:com.value.C},
-	'M':{text:"�R", img:'b_m', my:-1 ,bl:"m", value:com.value.M},
+	'C':{text:"俥", img:'b_c', my:-1 ,bl:"c", value:com.value.C},
+	'M':{text:"傌", img:'b_m', my:-1 ,bl:"m", value:com.value.M},
 	'X':{text:"象", img:'b_x', my:-1 ,bl:"x", value:com.value.X},
 	'S':{text:"士", img:'b_s', my:-1 ,bl:"s", value:com.value.S},
 	'J':{text:"帅", img:'b_j', my:-1 ,bl:"j", value:com.value.J},
