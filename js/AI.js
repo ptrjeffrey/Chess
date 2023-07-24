@@ -116,7 +116,24 @@ AI.getMoves = function (map, my){
 	}
 	return moves;
 }
-//A:当前棋手value/B:对手value/depth：层级
+/*
+	A:当前棋手value
+	B:对手value
+	map: [
+	['C0','M0','X0','S0','J0','S1','X1','M1','C1'],
+	[NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL],
+	[NULL,'P0',NULL,NULL,NULL,NULL,NULL,'P1',NULL],
+	['Z0',NULL,'Z1',NULL,'Z2',NULL,'Z3',NULL,'Z4'],
+	[NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL],
+	[NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL],
+	['z0',NULL,'z1',NULL,'z2',NULL,'z3',NULL,'z4'],
+	[NULL,'p0',NULL,NULL,NULL,NULL,NULL,'p1',NULL],
+	[NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL],
+	['c0','m0','x0','s0','j0','s1','x1','m1','c1']
+	]
+	depth：层级
+	my: 人是 1 AI: -1
+*/
 AI.getAlphaBeta = function (A, B, depth, map ,my) {
 	//var txtMap= map.join();
 	//var history=AI.historyTable[txtMap];

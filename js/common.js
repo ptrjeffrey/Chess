@@ -69,9 +69,6 @@ window.onload = function(){
 	
 	com.childList=[com.bg,com.dot,com.pane];
 	com.mans	 ={};		//棋子集合
-	//com.createMans(com.initMap)		//生成棋子
-	//com.bg.show();
-	//play.init();
 	
 	//开始对弈
 	com.get("playBtn").addEventListener("click", function(e) {
